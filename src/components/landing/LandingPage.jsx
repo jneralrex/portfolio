@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import { AiOutlineMenu } from 'react-icons/ai'
 import hero from '../../assets/images/blueRoof.jpeg'
 import planImg1 from '../../assets/images/careTaker.jpeg';
 import planImg2 from '../../assets/images/landLord.jpeg'
@@ -14,7 +14,7 @@ import slideImg5 from '../../assets/images/img.jpeg'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { RxDotFilled } from 'react-icons/rx';
 import {FaFacebook, FaInstagram, FaTwitter} from 'react-icons/fa';
-import {TiSocialPinterest} from 'react-Icons/ti';
+import {TiSocialPinterest} from 'react-icons/ti';
 import { Link } from 'react-router-dom';
 
 
