@@ -75,7 +75,7 @@ setCurrentIndex(slidesIndex)
       <div className='absolute w-full flex justify-between p-4 items-center bg-black'>
         <h1 className='text-white font-bold text-2xl z-20'>Meet me</h1>
         <AiOutlineMenu size={25} className='z-20 text-white cursor-pointer' onClick={handleNav} />
-        <div className={nav ? "ease-in duration-1000 fixed text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex-col z-10" : 'absolute top-0 left-[100%] h-screen ease-in duration-1000 z-100'}>
+        <div className={nav ? "ease-in duration-100 fixed text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex-col z-10" : 'absolute top-0 left-[100%] h-screen ease-in duration-100 z-100'}>
           <ul className='flex flex-col fixed w-full h-full items-center justify-center'>
             <li className='font-bold text-3xl p-8'>Home</li>
             <li className='font-bold text-3xl p-8'>Destination</li>
@@ -93,7 +93,7 @@ setCurrentIndex(slidesIndex)
             {/* <p>Developer</p> */}
             <h1 className='font-bold text-5xl md:text-7xl drop-shadow-2xl text-green-600'>Idah Abubakar Rex</h1>
             <p className='max-w-[600px] drop-shadow-2xl py-2 text-xl'>I'm a full stack web developer who is driven by a relentless pursuit of efficency. My focus remains steadfast on creating high-speed, user-friendly, visually stunning and innovative websites. I thrive in enviroments where pushing boundaries and setting new standard are the norm.</p>
-            <button className='bg-white text-black p-1 rounded-ss-[10px] rounded-ee-[10px] shadow-md shadow-green-600'>Contact Now</button>
+            <button className='bg-[white] text-black p-1 rounded-ss-[10px] rounded-ee-[10px] shadow-md shadow-[#606676]'><Link to='contact'>Contact Now</Link></button>
           </div>
         </div>
         <div className=' md:w-full mt-16 mr-1 flex items-center relative justify-center h-[500px]'>
@@ -119,8 +119,8 @@ setCurrentIndex(slidesIndex)
       </div>
       <div className='max-w-[900px] m-auto px-4 p-12 grid grid-cols-4 justify-between '>
        <Link to='contact'><p className='text-[14px] font-bold text-gray-700 md:text-lg'>Contact</p></Link> 
-        <p className='text-[14px] font-bold text-gray-700 md:text-lg'>Projects</p>
-        <p className='text-[14px] font-bold text-gray-700 md:text-lg'>About</p>
+       <Link to='meetme/about'><p className='text-[14px] font-bold text-gray-700 md:text-lg'>About</p></Link>
+       <Link to='meetme/projects'><p className='text-[14px] font-bold text-gray-700 md:text-lg'>Projects</p></Link> 
         <p className='text-[14px] font-bold text-gray-700 md:text-lg'>Stacks</p>
     </div>
     <div className='max-w-[1400px] m-auto py-16 px-4 grid lg:grid-cols-2 gap-4'>
