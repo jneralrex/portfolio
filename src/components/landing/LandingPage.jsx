@@ -93,7 +93,7 @@ setCurrentIndex(slidesIndex)
             {/* <p>Developer</p> */}
             <h1 className='font-bold text-5xl md:text-7xl drop-shadow-2xl text-green-600'>Idah Abubakar Rex</h1>
             <p className='max-w-[600px] drop-shadow-2xl py-2 text-xl'>I'm a full stack web developer who is driven by a relentless pursuit of efficency. My focus remains steadfast on creating high-speed, user-friendly, visually stunning and innovative websites. I thrive in enviroments where pushing boundaries and setting new standard are the norm.</p>
-            <button className='bg-[white] text-black p-1 rounded-ss-[10px] rounded-ee-[10px] shadow-md shadow-[#606676]'><Link to='contact'>Contact Now</Link></button>
+            <button className='shadow-green-400 shadow-sm text-blue-500  bg-black p-2 w-[200px] hover:border-green-600 hover:border rounded-ss-[10px] rounded-ee-[10px]'><Link to='contact'>Contact Now</Link></button>
           </div>
         </div>
         <div className=' md:w-full mt-16 mr-1 flex items-center relative justify-center h-[500px]'>
@@ -134,11 +134,11 @@ setCurrentIndex(slidesIndex)
             </div>
             {/* Right side*/}
             <div className='flex flex-col h-full justify-center text-gray-600'>
-                <h3 className='text-5xl md:text-6xl font-bold'>Project</h3>
-                <p className='text-2xl py-6'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, aperiam!</p>
-                <p className='pb-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolorum. Molestiae consequuntur error et, quaerat accusamus sint maiores quisquam! Pariatur qui animi ab assumenda ipsam tempora ut aspernatur numquam illum!
-                    <button className='border-black hover:shadow-xl text-blue-500'>...see more</button>
+                <h3 className='text-5xl md:text-6xl font-bold'>Projects</h3>
+                {/* <p className='text-2xl py-6'>See more</p> */}
+                <p className='mt-10 pb-6'>I have a gallery of projects built using the acceptable industry standard practices, speed, simplicity, visually impressive and all round efficiency are some of the perks of each and everyone of them
                 </p>
+                <Link to='meetme/projects'>  <button className='shadow-green-400 shadow-sm text-blue-500 rounded-md p-2 w-[200px] hover:border-green-600 hover:border'>Projects</button></Link> 
             </div>
         </div>
         <div className='m-w-[1400px] h-[580px] w-full m-auto py-16 px-4 relative group md:hidden'>

@@ -2,8 +2,12 @@ import React from 'react'
 import HtmlPics from '../../assets/images/htmlpics.png'
 import ReactPics from '../../assets/images/reactpics.png'
 import CssPics from '../../assets/images/csspics.png'
-import javaScript from '../../assets/images/javascript.png'
-import jQuery from '../../assets/images/jquery.png'
+import javaScriptPics from '../../assets/images/javascript.png'
+import jQueryPics from '../../assets/images/jquery.png'
+import NodePics from '../../assets/images/node.png'
+import BootstrapPics from '../../assets/images/bootstrap.png'
+
+
 
 
 
@@ -28,15 +32,21 @@ const AboutPage = () => {
           <div className=' flex flex-row  items-center justify-between'> <div>CSS3</div><div className='border p-1 rounded-full mr-20'><img src={CssPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
         </div>
         <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
-          <div className=' flex flex-row  items-center justify-between'> <div className=''>JAVASCRIPT</div><div className='border p-1 rounded-full mr-20'><img src={javaScript} alt="" srcset="" className=' h-[50px] ' /></div></div>
+          <div className=' flex flex-row  items-center justify-between'> <div className=''>JAVASCRIPT</div><div className='border p-1 rounded-full mr-20'><img src={javaScriptPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
         </div>
         </div>
         <div className='col-span-2'> 
           <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
-          <div className=' flex flex-row  items-center justify-between'> <div className=''>JQUERY</div><div className='border p-1 rounded-full mr-20'><img src={jQuery} alt="" srcset="" className=' h-[50px] ' /></div></div>
+          <div className=' flex flex-row  items-center justify-between'> <div className=''>JQUERY</div><div className='border p-1 rounded-full mr-20'><img src={jQueryPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
+        </div>
+        <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
+          <div className=' flex flex-row  items-center justify-between'> <div className=''>BOOTSTRAP</div><div className='border p-1 rounded-full mr-20'><img src={BootstrapPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
         </div>
         <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
           <div className=' flex flex-row  items-center justify-between'> <div className=''>REACT.JS</div><div className='border p-1 rounded-full mr-20'><img src={ReactPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
+        </div>
+        <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
+          <div className=' flex flex-row  items-center justify-between'> <div className=''>NODE.JS</div><div className='border p-1 rounded-full mr-20'><img src={NodePics} alt="" srcset="" className=' h-[50px] ' /></div></div>
         </div>
         </div>
       </div>

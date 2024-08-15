@@ -15,8 +15,8 @@ const Contact = () => {
         <div className="ml-2 mt-16 w-[300px] text-gray-50 absolute text-center font-thin md:mt-0 md:justify-self-end md:mr-5">Would you like to talk? Please contact me through any of these avenues</div>
       </div>
       <div className="text-green-400 text-2xl ml-6 md:mt-7 md:mb-7" onClick={handleBackNavigate}><FaArrowLeft /></div>
-      <div className=" mt-16 ml-2 flex flex-col mr-2 md:mr-5 md:ml-5 md:grid md:grid-cols-4 md:min-h-[79.5vh] md:mt-0">
-      <div className="border-2 border-[#F7F7F8] rounded-lg shadow-gray-800 shadow-md m-2 h-[400px] md:h-[480px] md:rounded-none flex flex-col items-center md:col-span-2">
+      <div className=" mt-16 ml-2 flex flex-col-reverse mr-2 md:mr-5 md:ml-5 md:grid md:grid-cols-4 md:min-h-[79.5vh] md:mt-0 group">
+      <div className="rounded-lg shadow-gray-800 shadow-md m-2 h-[400px] md:h-[480px] md:rounded-none flex flex-col items-center md:col-span-2 hover:border-[#F7F7F8] hover:border-2">
           <div className="flex flex-col justify-center items-center w-full h-full">
           <div className=" flex flex-row justify-center mb-1">
           <div className="text-[#F7F7F8] font-serif text-3xl mt-[-8px] md:text-4xl md:mt-[15px] md:mb-[10px] lg:text-5xl xl:text-6xl">Message:</div>
@@ -40,12 +40,12 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="border-2 border-[#F7F7F8] p-4 rounded-full shadow-gray-800 shadow-md m-2 h-[200px] md:h-[480px] md:rounded-none flex flex-col items-center justify-between">
+        <div className=" p-4 rounded-full shadow-gray-800 shadow-md m-2 h-[200px] md:h-[480px] md:rounded-none flex flex-col items-center justify-between hover:border-[#F7F7F8] hover:border-2">
           <div className="flex flex-row items-center p-2 text-3xl lg:text-5xl xl:text-6xl"><span className="text-[#F7F7F8] font-serif">Location:</span></div>
           <div className="text-green-400 text-5xl md:text-9xl"><FaGlobeAfrica /></div>
           <div className="text-gray-300 font-bold lg:text-xl">Abuja, Nigeria</div>
         </div>
-        <div className="border-2 border-[#F7F7F8] p-4 rounded-full shadow-gray-800 shadow-md m-2 h-[200px] md:h-[480px] md:rounded-none flex flex-col items-center justify-between"><div className="flex flex-row items-center justify-center p-2 text-3xl lg:text-5xl xl:text-6xl"><span className="text-[#F7F7F8] font-serif">Tel:</span></div>
+        <div className="p-4 rounded-full shadow-gray-800 shadow-md m-2 h-[200px] md:h-[480px] md:rounded-none flex flex-col items-center justify-between hover:border-[#F7F7F8] hover:border-2"><div className="flex flex-row items-center justify-center p-2 text-3xl lg:text-5xl xl:text-6xl"><span className="text-[#F7F7F8] font-serif">Tel:</span></div>
           <div className=" flex md:w-[150px] justify-between flex-row items-center lg:justify-around lg:w-[200px]">
             <div className="text-green-400 lg:text-2xl"><FaPhoneAlt /></div>
             <div className="text-gray-300 font-bold lg:text-xl">+2349056574771</div>
@@ -56,7 +56,7 @@ const Contact = () => {
             <div className="text-gray-300 font-bold lg:text-xl">+2349056574771</div>
           </div>
         </div>
-        <div className="border-2 border-[#F7F7F8] p-4 rounded-full shadow-gray-800 shadow-md m-2 h-[200px] md:h-[480px] md:rounded-none flex flex-col items-center justify-between md:col-span-2"><div className="flex flex-row items-center justify-center p-2 text-3xl lg:text-5xl xl:text-6xl"><span className="text-[#F7F7F8] font-serif">Email:</span></div>
+        <div className="p-4 rounded-full shadow-gray-800 shadow-md m-2 h-[200px] md:h-[480px] md:rounded-none flex flex-col items-center justify-between md:col-span-2 hover:border-[#F7F7F8] hover:border-2"><div className="flex flex-row items-center justify-center p-2 text-3xl lg:text-5xl xl:text-6xl"><span className="text-[#F7F7F8] font-serif">Email:</span></div>
           <div className="text-green-400 text-5xl md:text-9xl"><GrMail /></div>
           <div className="justify-center flex md:w-[180px] flex-row items-center lg:justify-center lg:w-[200px]">
             <div className="text-gray-300 justify-center font-medium md:justify-center md:text-[13px] lg:text-[16px]">idahabubakar49@gmail.com</div>
