@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import hero from '../../assets/images/blueRoof.jpeg'
 import planImg1 from '../../assets/images/careTaker.jpeg';
@@ -19,6 +19,9 @@ import { Link } from 'react-router-dom';
 
 
 const LandingPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -51,7 +54,6 @@ const LandingPage = () => {
         title: 'Image Five'
     }
 ]
-
 const [currenIndex, setCurrentIndex] = useState(0);
 
 const prevSlide =()=>{
@@ -90,7 +92,6 @@ setCurrentIndex(slidesIndex)
         <div className='bg-black/30 absolute left-0 top-0 w-full h-screen' />
         <div className='absolute top-0 w-full h-full flex flex-col justify-center text-white md:relative'>
           <div className='md:max-w-[1100px] m-auto absolute p-4 '>
-            {/* <p>Developer</p> */}
             <h1 className='font-bold text-5xl md:text-7xl drop-shadow-2xl text-green-600'>Idah Abubakar Rex</h1>
             <p className='max-w-[600px] drop-shadow-2xl py-2 text-xl'>I'm a full stack web developer who is driven by a relentless pursuit of efficency. My focus remains steadfast on creating high-speed, user-friendly, visually stunning and innovative websites. I thrive in enviroments where pushing boundaries and setting new standard are the norm.</p>
             <button className='shadow-green-400 shadow-sm text-blue-500  bg-black p-2 w-[200px] hover:border-green-600 hover:border rounded-ss-[10px] rounded-ee-[10px]'><Link to='contact'>Contact Now</Link></button>
@@ -99,22 +100,6 @@ setCurrentIndex(slidesIndex)
         <div className=' md:w-full mt-16 mr-1 flex items-center relative justify-center h-[500px]'>
         <div className='md:w-full h-full rounded-2xl bg-center bg-cover duration-500'
             style={{backgroundImage: `url(${slides[currenIndex].images})`}}></div>
-            {/*Left arrow */}
-            {/* <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-0 text-2xl rounded-full p-2 group-hover:bg-black/20 text-white cursor-pointer'>
-                <AiOutlineArrowLeft size={30} onClick={prevSlide}/>
-            </div>
-            <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-[4%] text-2xl rounded-full p-2 group-hover:bg-black/20 text-white cursor-pointer'>
-                <AiOutlineArrowRight size={30} onClick={nextSlide}/>
-            </div> */}
-            {/*Right arrow */}
-
-            {/* <div className='md:flex flex-col top-4 justify-center py-2'>
-                {slides.map((slide, slidesIndex) =>(
-                    <div className='text-2xl cursor-pointer' key={slidesIndex} onClick={()=>goToSlides(slidesIndex)}>
-                        <RxDotFilled style={{color:'gray'}}/>
-                    </div>
-                ))}
-            </div> */}
         </div>
       </div>
       <div className='max-w-[900px] m-auto px-4 p-12 grid grid-cols-4 justify-between '>
@@ -135,7 +120,6 @@ setCurrentIndex(slidesIndex)
             {/* Right side*/}
             <div className='flex flex-col h-full justify-center text-gray-600'>
                 <h3 className='text-5xl md:text-6xl font-bold'>Projects</h3>
-                {/* <p className='text-2xl py-6'>See more</p> */}
                 <p className='mt-10 pb-6'>I have a gallery of projects built using the acceptable industry standard practices, speed, simplicity, visually impressive and all round efficiency are some of the perks of each and everyone of them
                 </p>
                 <Link to='meetme/projects'>  <button className='shadow-green-400 shadow-sm text-blue-500 rounded-md p-2 w-[200px] hover:border-green-600 hover:border'>Projects</button></Link> 
@@ -163,55 +147,6 @@ setCurrentIndex(slidesIndex)
             </div>
         </div>
         <div className='w-full pt-24 bg-gray-900 text-gray-300 py-2 px-2'>
-        {/* <div className='max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8 px-4'>
-            <div>
-                <h6 className='font-bold pt-2 uppercase'>Solutions</h6>
-                <ul>
-                    <li className='py-1'>Travel</li>
-                    <li className='py-1'>Booking</li>
-                    <li className='py-1'>Flight</li>
-                    <li className='py-1'>Cruise</li>
-                    <li className='py-1'>Ground</li>
-                </ul>
-            </div>
-            <div>
-                <h6 className='font-bold pt-2 uppercase'>Support</h6>
-                <ul>
-                    <li className='py-1'>Pricing</li>
-                    <li className='py-1'>Documentation</li>
-                    <li className='py-1'>Tours</li>
-                    <li className='py-1'>Refunds</li>
-                </ul>
-            </div>
-            <div>
-                <h6 className='font-bold pt-2 uppercase'>Company</h6>
-                <ul>
-                    <li className='py-1'>About</li>
-                    <li className='py-1'>Blog</li>
-                    <li className='py-1'>Jobs</li>
-                    <li className='py-1'>Press</li>
-                    <li className='py-1'>Partners</li>
-                </ul>
-            </div>
-            <div>
-                <h6 className='font-bold pt-2 uppercase'>Legal</h6>
-                <ul>
-                    <li className='py-1'>Claims</li>
-                    <li className='py-1'>Privacy</li>
-                    <li className='py-1'>Terms</li>
-                    <li className='py-1'>Policies</li>
-                    <li className='py-1'>Conditions</li>
-                </ul>
-            </div>
-            <div className='col-span-2 py-8 md:pt-2'>
-                <p className='font-bold uppercase'>Subscribe to our newsletter</p>
-                <p className='py-4'>The Latest deals, articles and resources sent your inbox weekly</p>
-                <form className='flex flex-col sm:flex-col'>
-                    <input type="email" placeholder='Enter email...' className='w-full p-2 mr-4 rounded-md mb-4'/>
-                    <button className='p-2 mb-4 rounded-md'>Subscribe</button>
-                </form>
-            </div>
-        </div> */}
         <div className='flex flex-col max-w-[1400px] px-2 py-4 justify-between sm: flex-row text-center text-gray-500'>
             <p className='py-4'>2022 Experiences, LLC. All rights reserved</p>
             <div className='flex justify-between w-[150px] sm:w-[300px] pt-4 text-2xl'>
