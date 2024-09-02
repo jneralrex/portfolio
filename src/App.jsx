@@ -5,7 +5,6 @@ import Nav from './components/navigation/Nav';
 import AboutPage from './components/story/AboutPage';
 import Contact from './components/onboardingPages/Contact';
 import Projects from './components/projects/Projects';
-import ScrollToTop from './components/pageLoadControl/ScrollToTop';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
