@@ -7,9 +7,9 @@ import Snackbar from '../response/Snackbar';
 
 
 const Contact = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   const handleBackNavigate = () => {
     navigate(-1);
