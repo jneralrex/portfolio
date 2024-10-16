@@ -89,7 +89,7 @@ const Contact = () => {
         <div className="p-4 rounded-full shadow-gray-800 shadow-md m-2 h-[200px] md:h-[520px] md:rounded-none flex flex-col items-center justify-between hover:border-[#F7F7F8] hover:border-2"><div className="flex flex-row items-center justify-center p-2 text-3xl lg:text-5xl xl:text-6xl"><span className="text-[#F7F7F8] font-serif">Tel:</span></div>
           <div className=" flex md:w-[150px] justify-between flex-row items-center lg:justify-around lg:w-[200px]">
             <div className="text-green-400 lg:text-2xl"><FaPhoneAlt /></div>
-            <div className="text-gray-300 font-bold lg:text-xl">+2349056574771</div>
+            <div className="text-gray-300 font-bold lg:text-xl">+2348175225016</div>
           </div>
           <div className="text-5xl font-bold font-serif">OR</div>
           <div className=" flex md:w-[150px] justify-between flex-row items-center lg:justify-around lg:w-[200px]">
