@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
-import hero from '../../assets/images/blueRoof.jpeg'
+import hero from '../../assets/images/hero.jpg'
 import planImg1 from '../../assets/images/careTaker.jpeg';
 import planImg2 from '../../assets/images/landLord.jpeg'
 import planImg3 from '../../assets/images/careTaker.jpeg'
@@ -13,8 +13,7 @@ import slideImg4 from '../../assets/images/tenants.jpeg'
 import slideImg5 from '../../assets/images/img.jpeg'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { RxDotFilled } from 'react-icons/rx';
-import {FaFacebook, FaInstagram, FaTwitter} from 'react-icons/fa';
-import {TiSocialPinterest} from 'react-icons/ti';
+import { FaGithub,  FaLinkedin, } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
@@ -35,7 +34,7 @@ const LandingPage = () => {
 
   const slides = [
     {
-        images: slideImg1,
+        images: hero,
         title: 'Image One'
     },
     {
@@ -80,15 +79,15 @@ setCurrentIndex(slidesIndex)
         <div className={nav ? "ease-in duration-100 fixed text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex-col z-10" : 'absolute top-0 left-[100%] h-screen ease-in duration-100 z-100'}>
           <ul className='flex flex-col fixed w-full h-full items-center justify-center'>
             <li className='font-bold text-3xl p-8'>Home</li>
-            <li className='font-bold text-3xl p-8'>Destination</li>
-            <li className='font-bold text-3xl p-8'>Reservation</li>
-            <li className='font-bold text-3xl p-8'>Amenities</li>
-            <li className='font-bold text-3xl p-8'>Rooms</li>
+            <li className='font-bold text-3xl p-8'>Project</li>
+            <li className='font-bold text-3xl p-8'>Skills</li>
+            <li className='font-bold text-3xl p-8'>About</li>
+            <li className='font-bold text-3xl p-8'>Contact me</li>
           </ul>
         </div>
       </div>
       <div className='w-full h-screen flex flex-row gap-2'>
-        <img src={hero} alt="" className='top-0 left-0 w-full h-screen object-cover md:hidden' />
+        <img src={hero} alt="" className='top-0 left-0 w-full h-screen object-contain rounded-md md:hidden' />
         <div className='bg-black/30 absolute left-0 top-0 w-full h-screen' />
         <div className='absolute top-0 w-full h-full flex flex-col justify-center text-white md:relative'>
           <div className='md:max-w-[1100px] m-auto absolute p-4 '>
@@ -98,7 +97,7 @@ setCurrentIndex(slidesIndex)
           </div>
         </div>
         <div className=' md:w-full mt-16 mr-1 flex items-center relative justify-center h-[500px]'>
-        <div className='md:w-full h-full rounded-2xl bg-center bg-cover duration-500'
+        <div className='md:w-full h-full rounded-2xl bg-center bg-contain bg-no-repeat duration-500'
             style={{backgroundImage: `url(${slides[currenIndex].images})`}}></div>
         </div>
       </div>
@@ -127,7 +126,7 @@ setCurrentIndex(slidesIndex)
         </div>
         <div className='m-w-[1400px] h-[580px] w-full m-auto py-16 px-4 relative group md:hidden'>
             <div 
-            className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+            className='w-full h-full rounded-2xl bg-center bg-cover duration-500 rounded-md'
             style={{backgroundImage: `url(${slides[currenIndex].images})`}}></div>
             {/*Left arrow */}
             <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 group-hover:bg-black/20 text-white cursor-pointer'>
@@ -149,11 +148,9 @@ setCurrentIndex(slidesIndex)
         <div className='w-full pt-24 bg-gray-900 text-gray-300 py-2 px-2'>
         <div className='flex flex-col max-w-[1400px] px-2 py-4 justify-between sm: flex-row text-center text-gray-500'>
             <p className='py-4'>2022 Experiences, LLC. All rights reserved</p>
-            <div className='flex justify-between w-[150px] sm:w-[300px] pt-4 text-2xl'>
-                <FaFacebook/>
-                <FaInstagram/>
-                <FaTwitter/>
-                <TiSocialPinterest size={30}/>
+            <div className='flex justify-start gap-5 w-[150px] sm:w-[300px] pt-4 text-2xl items-center'>
+                <FaGithub/>
+                <FaLinkedin size={30}/>
             </div>
         </div>
     </div>

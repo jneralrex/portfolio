@@ -19,10 +19,10 @@ const AboutPage = () => {
         <span className='text-5xl font-serif ml-5'>With</span> a commitment to excellence, I bring cutting-edge skills, extensive knowledge, and hands-on experience to every project. I am always seeking opportunities to further enhance my expertise and contribute to groundbreaking initiatives.
         If you're looking for a dedicated professional who prioritizes speed, usability, aesthetics, and innovation, I'm eager to collaborate and deliver exceptional results.
       </div>
-      <div className='text-center text-3xl'>
+      <div className='text-center text-3xl my-2'>
         Tech Skills
       </div>
-      <div className='flex flex-col md:grid md:grid-cols-4 md:gap-5'>
+      <div className='flex flex-col md:grid md:grid-cols-4 md:gap-5 items-center'>
         <div className='col-span-2'> 
           <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
           <div className=' flex flex-row items-center justify-between'> <div>HTML5</div><div className='border p-1 rounded-full mr-20'><img src={HtmlPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
@@ -36,53 +36,31 @@ const AboutPage = () => {
         </div>
         <div className='col-span-2'> 
           <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
-          <div className=' flex flex-row  items-center justify-between'> <div className=''>JQUERY</div><div className=' p-1 rounded-full mr-20'><img src={jQueryPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
+          <div className=' flex flex-row  items-center justify-between'> <div className=''>JQUERY</div><div className='border p-1 rounded-full mr-20'><img src={jQueryPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
         </div>
         <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
-          <div className=' flex flex-row  items-center justify-between'> <div className=''>BOOTSTRAP</div><div className=' p-1 rounded-full mr-20'><img src={BootstrapPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
+          <div className=' flex flex-row  items-center justify-between'> <div className=''>BOOTSTRAP</div><div className='border p-1 rounded-full mr-20'><img src={BootstrapPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
         </div>
         <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
-          <div className=' flex flex-row  items-center justify-between'> <div className=''>REACT.JS</div><div className=' p-1 rounded-full mr-20'><img src={ReactPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
+          <div className=' flex flex-row  items-center justify-between'> <div className=''>REACT.JS</div><div className='border p-1 rounded-full mr-20'><img src={ReactPics} alt="" srcset="" className=' h-[50px] ' /></div></div>
         </div>
         <div className='text-[#F7F7F8] font-bold font-sans mt-2'>
-          <div className=' flex flex-row  items-center justify-between'> <div className=''>NODE.JS</div><div className=' p-1 rounded-full mr-20'><img src={NodePics} alt="" srcset="" className=' h-[50px] ' /></div></div>
+          <div className=' flex flex-row  items-center justify-between'> <div className=''>NODE.JS</div><div className='border p-1 rounded-full mr-20'><img src={NodePics} alt="" srcset="" className=' h-[50px] ' /></div></div>
         </div>
         </div>
       </div>
-      <div className='text-center text-3xl'>
+      <div className='text-center text-3xl my-2'>
         Soft Skills
       </div>
-      <div>
-        <ul>
-          <li>Good listener</li>
-          <li>Attention to details</li>
-          <li>Problem solving</li>
-          <li>Critical thinking</li>
-          <li>Saas</li>
-          <li>Bootstrap</li>
-          <li>React.js</li>
-          <li>Tailwind</li>
-          <li>mySql</li>
-          <li>node.js</li>
-          <li>mongoDb</li>
-        </ul>
-      </div>
-      <div className='text-center text-3xl'>
-        Education
-      </div>
-      <div>
-        <ul>
-          <li>Good listener</li>
-          <li>Attention to details</li>
-          <li>Problem solving</li>
-          <li>Critical thinking</li>
-          <li>Saas</li>
-          <li>Bootstrap</li>
-          <li>React.js</li>
-          <li>Tailwind</li>
-          <li>mySql</li>
-          <li>node.js</li>
-          <li>mongoDb</li>
+      <div className=''>
+        <ul className='flex flex-col gap-3 justify-center text-white text-center '>
+          <li className='border border-gray-500 p-1'>Good listener</li>
+          <li className='border border-gray-500 p-1'>Attention to details</li>
+          <li className='border border-gray-500 p-1'>Problem solving mindset</li>
+          <li className='border border-gray-500 p-1'>Critical thinking</li>
+          <li className='border border-gray-500 p-1'>Good team worker</li>
+          <li className='border border-gray-500 p-1'>Disciplined achiever</li>
+
         </ul>
       </div>
     </div>
