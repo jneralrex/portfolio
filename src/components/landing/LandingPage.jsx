@@ -87,7 +87,7 @@ setCurrentIndex(slidesIndex)
         </div>
       </div>
       <div className='w-full h-screen flex flex-row gap-2'>
-        <img src={hero} alt="" className='top-0 left-0 w-full h-screen object-contain rounded-md md:hidden' />
+        <img src={hero} alt="" className='top-0 left-0 w-full h-screen object-cover rounded-md md:hidden' />
         <div className='bg-black/30 absolute left-0 top-0 w-full h-screen' />
         <div className='absolute top-0 w-full h-full flex flex-col justify-center text-white md:relative'>
           <div className='md:max-w-[1100px] m-auto absolute p-4 '>
