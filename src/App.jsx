@@ -10,8 +10,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
         <Route index element={<LandingPage />} />
-        <Route path='contact' element={<Contact />} />
-        <Route path='meetme' element={<Nav />}>
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/meetme' element={<Nav />}>
           <Route path='projects' element={<Projects />} />
           <Route path='about' element={<AboutPage />} />
         </Route>

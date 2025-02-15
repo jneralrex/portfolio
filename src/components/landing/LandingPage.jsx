@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import hero from '../../assets/images/hero.jpg'
-import planImg1 from '../../assets/images/careTaker.jpeg';
 import planImg2 from '../../assets/images/landLord.jpeg'
 import planImg3 from '../../assets/images/careTaker.jpeg'
-import planImg4 from '../../assets/images/tenants.jpeg'
 import planImg5 from '../../assets/images/img.jpeg'
-import slideImg1 from '../../assets/images/careTaker.jpeg';
-import slideImg2 from '../../assets/images/landLord.jpeg'
+import project1 from '../../assets/images/project1.png';
 import slideImg3 from '../../assets/images/careTaker.jpeg'
-import slideImg4 from '../../assets/images/tenants.jpeg'
 import slideImg5 from '../../assets/images/img.jpeg'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { RxDotFilled } from 'react-icons/rx';
 import { FaGithub,  FaLinkedin, } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import cinco from "../../assets/images/cinco.png";
 
 
 const LandingPage = () => {
@@ -32,20 +29,27 @@ const LandingPage = () => {
     }
   }
 
-  const slides = [
+  const oneSides = [
     {
         images: hero,
         title: 'Image One'
-    },
+    }
+]
+const slides = [
+  {
+      images: hero,
+      title: 'Image One'
+  }
+  ,
     {
-        images: slideImg2,
+        images: project1,
         title: 'Image Two'
     },
     {
         images: slideImg3,
         title: 'Image Three'
     }, {
-        images: slideImg4,
+        images: cinco,
         title: 'Image Four'
     },
     {
@@ -67,38 +71,38 @@ const nextSlide =()=>{
     setCurrentIndex(newIndex);
 
 };
-
+;
+ 
 const goToSlides = (slidesIndex) =>{
 setCurrentIndex(slidesIndex)
 }
   return (
     <div className='bg-black'>
       <div className='absolute w-full flex justify-between p-4 items-center bg-black'>
-        <h1 className='text-white font-bold text-2xl z-20'>Meet me</h1>
+        <h1 className='text-white font-bold md:text-2xl z-20'>Meet me</h1>
         <AiOutlineMenu size={25} className='z-20 text-white cursor-pointer' onClick={handleNav} />
         <div className={nav ? "ease-in duration-100 fixed text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex-col z-10" : 'absolute top-0 left-[100%] h-screen ease-in duration-100 z-100'}>
           <ul className='flex flex-col fixed w-full h-full items-center justify-center'>
-            <li className='font-bold text-3xl p-8'>Home</li>
-            <li className='font-bold text-3xl p-8'>Project</li>
-            <li className='font-bold text-3xl p-8'>Skills</li>
-            <li className='font-bold text-3xl p-8'>About</li>
-            <li className='font-bold text-3xl p-8'>Contact me</li>
+            <li className='font-bold text-3xl p-8'><Link to='/'>Home</Link></li>
+            <li className='font-bold text-3xl p-8'><Link to='meetme/projects'>Projects</Link></li>
+            <li className='font-bold text-3xl p-8'><Link to='meetme/about'>About</Link></li>
+            <li className='font-bold text-3xl p-8'><Link to='/contact'>Contact</Link></li>
           </ul>
         </div>
       </div>
       <div className='w-full h-screen flex flex-row gap-2'>
-        <img src={hero} alt="" className='top-0 left-0 w-full h-screen object-cover rounded-md md:hidden' />
+        <img src={hero} alt="" className='top-0 left-0 w-full h-screen object-contain sm:object-fill rounded-md md:hidden' />
         <div className='bg-black/30 absolute left-0 top-0 w-full h-screen' />
         <div className='absolute top-0 w-full h-full flex flex-col justify-center text-white md:relative'>
           <div className='md:max-w-[1100px] m-auto absolute p-4 '>
-            <h1 className='font-bold text-5xl md:text-7xl drop-shadow-2xl text-green-600'>Idah Abubakar Rex</h1>
+            <h1 className='font-bold text-2xl md:text-7xl drop-shadow-2xl text-green-600'>Idah Abubakar Rex</h1>
             <p className='max-w-[600px] drop-shadow-2xl py-2 text-xl'>I'm a full stack web developer who is driven by a relentless pursuit of efficency. My focus remains steadfast on creating high-speed, user-friendly, visually stunning and innovative websites. I thrive in enviroments where pushing boundaries and setting new standard are the norm.</p>
             <button className='shadow-green-400 shadow-sm text-blue-500  bg-black p-2 w-[200px] hover:border-green-600 hover:border rounded-ss-[10px] rounded-ee-[10px]'><Link to='contact'>Contact Now</Link></button>
           </div>
         </div>
         <div className=' md:w-full mt-16 mr-1 flex items-center relative justify-center h-[500px]'>
         <div className='md:w-full h-full rounded-2xl bg-center bg-contain bg-no-repeat duration-500'
-            style={{backgroundImage: `url(${slides[currenIndex].images})`}}></div>
+            style={{backgroundImage: `url(${slides})`}}></div>
         </div>
       </div>
       <div className='max-w-[900px] m-auto px-4 p-12 grid grid-cols-4 justify-between '>
@@ -109,17 +113,17 @@ setCurrentIndex(slidesIndex)
     </div>
     <div className='max-w-[1400px] m-auto py-16 px-4 grid lg:grid-cols-2 gap-4'>
             {/*Left side*/}
-            <div className='grid grid-cols-2 grid-rows-6 h-[80vh]'>
-                <img src={planImg1} alt="" className='object-cover w-full h-full p-2 row-span-3' />
+            <div className='grid grid-cols-2 grid-rows-6 h-[120vh]'>
+                <img src={project1} alt="" className='object-cover w-full h-full p-2 row-span-3' />
                 <img src={planImg2} alt="" className='object-cover w-full h-full p-2 row-span-2' />
                 <img src={planImg3} alt="" className='object-cover w-full h-full p-2 row-span-2' />
-                <img src={planImg4} alt="" className='object-cover w-full h-full p-2 row-span-3' />
+                <img src={cinco} alt="" className='object-cover w-full h-full p-2 row-span-3' />
                 <img src={planImg5} alt="" className='object-cover w-full h-full p-2 row-span-2' />
             </div>
             {/* Right side*/}
             <div className='flex flex-col h-full justify-center text-gray-600'>
                 <h3 className='text-5xl md:text-6xl font-bold'>Projects</h3>
-                <p className='mt-10 pb-6'>I have a gallery of projects built using the acceptable industry standard practices, speed, simplicity, visually impressive and all round efficiency are some of the perks of each and everyone of them
+                <p className='mt-10 pb-6'>I have a gallery of projects built using the professional industry standard practices, speed, simplicity, visually impressive and all round efficiency are some of the perks of each and everyone of them
                 </p>
                 <Link to='meetme/projects'>  <button className='shadow-green-400 shadow-sm text-blue-500 rounded-md p-2 w-[200px] hover:border-green-600 hover:border'>Projects</button></Link> 
             </div>

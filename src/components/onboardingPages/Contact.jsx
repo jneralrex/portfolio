@@ -33,7 +33,6 @@ const Contact = () => {
   const closeSnackbar = () => {
     setSnackbar({ message: "", type: "" });
   };
-  console.log(message)
   return (
     <div className="absolute min-h-[100vh] left-0 right-0 bg-gradient-to-b from-[#3795BD] to-[#3A1078]">
       <div className=" w-full flex flex-col items-center md:grid md:grid-cols-3 lg:grid-cols-3">
