@@ -29,12 +29,7 @@ const LandingPage = () => {
     }
   }
 
-  const oneSides = [
-    {
-        images: hero,
-        title: 'Image One'
-    }
-]
+ 
 const slides = [
   {
       images: hero,
@@ -102,7 +97,7 @@ setCurrentIndex(slidesIndex)
         </div>
         <div className=' md:w-full mt-16 mr-1 flex items-center relative justify-center h-[500px]'>
         <div className='md:w-full h-full rounded-2xl bg-center bg-contain bg-no-repeat duration-500'
-            style={{backgroundImage: `url(${slides})`}}></div>
+            style={{backgroundImage: `url(${hero})`}}></div>
         </div>
       </div>
       <div className='max-w-[900px] m-auto px-4 p-12 grid grid-cols-4 justify-between '>
