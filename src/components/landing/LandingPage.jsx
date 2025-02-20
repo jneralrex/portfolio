@@ -78,7 +78,7 @@ const LandingPage = () => {
         <div
           className={
             nav
-              ? "ease-in duration-100 fixed text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex-col z-10"
+              ? "ease-in duration-100 fixed text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 md:py-7 flex-col z-10"
               : "absolute top-0 left-[100%] h-screen ease-in duration-100 z-100"
           }
         >
@@ -98,15 +98,15 @@ const LandingPage = () => {
           </ul>
         </div>
       </div>
-      <div className="w-full h-[450px] sm:h-screen lg:h-[500px] lg:mb-[20px] flex flex-row gap-2">
-        <img
-          src={hero}
-          alt=""
-          className="top-0 left-0 w-full h-screen object-contain sm:object-fill rounded-md md:hidden"
-        />
+      <div className="w-full h-screen lg:h-[500px] lg:mb-[20px] flex flex-row gap-2 bg-no-repeat"  style={{ backgroundImage: `url(${hero})` }}>
+        <div
+          className="w-full h-[500px] bg-no-repeat  absolute object-cover rounded-md md:hidden"
+          >
+
+        </div>
         <div className="bg-black/50 absolute left-0 top-0 w-full h-screen pointer-events-none" />
-        <div className="absolute top-0 w-full h-full flex flex-col justify-center text-white md:relative">
-          <div className="md:max-w-[1100px] m-auto absolute p-4 ">
+        <div className="absolute top-0 w-full h-full flex flex-col justify-center bg-center text-white md:relative" >
+          <div className="md:max-w-[1100px] m-auto absolute p-4  ">
             <h1 className="font-bold text-2xl md:text-7xl drop-shadow-2xl text-green-600">
               Idah Abubakar Rex
             </h1>
@@ -124,7 +124,7 @@ const LandingPage = () => {
         </div>
         <div className=" md:w-full mt-5 mr-1 flex items-center relative justify-center h-[500px]">
           <div
-            className="md:w-full h-full rounded-2xl bg-center bg-contain bg-no-repeat duration-500"
+            className="md:w-full h-full rounded-2xl bg-center bg-contain bg-no-repeat duration-500 hidden"
             style={{ backgroundImage: `url(${hero})` }}
           ></div>
         </div>
@@ -145,7 +145,7 @@ const LandingPage = () => {
           <p className="text-[14px] font-bold text-white md:text-lg">Stacks</p>
         </Link>
       </div>
-      <div className="max-w-[1400px] m-auto px-4 grid lg:grid-cols-2 gap-4">
+      <div className="max-w-[1400px] m-auto  px-4 grid lg:grid-cols-2 gap-4">
         {/*Left side*/}
         <div className="grid grid-cols-2 grid-rows-6 h-[120vh]">
           <img
@@ -220,8 +220,8 @@ const LandingPage = () => {
       </div>
       <div className="w-full bg-gray-900 text-gray-300 py-2 px-2">
         <div className="flex flex-col max-w-[1400px] px-2 py-4 justify-between sm: flex-row text-center text-gray-500">
-          <p className="py-4">2022 Experiences, LLC. All rights reserved</p>
-          <div className="flex justify-start gap-5 w-[150px] sm:w-[300px] pt-4 text-2xl items-center">
+        <p className="text-lg">&copy; 2025 My Portfolio. All rights reserved.</p>
+           <div className="flex justify-start gap-5 w-[150px] sm:w-[300px] pt-4 text-2xl items-center">
             <Link to="https://github.com/jneralrex">
               <FaGithub />
             </Link>
