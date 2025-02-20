@@ -34,7 +34,7 @@ const Contact = () => {
     setSnackbar({ message: "", type: "" });
   };
   return (
-    <div className="absolute min-h-[100vh] left-0 right-0 bg-gradient-to-b from-[#3795BD] to-[#3A1078]">
+    <div className="absolute min-h-[100vh] left-0 right-0 bg-gradient-to-b from-[black] to-[black]">
       <div className=" w-full flex flex-col items-center md:grid md:grid-cols-3 lg:grid-cols-3">
         <div className=" flex gap-3 justify-center items-center w-[310px] text-4xl font-bold md:ml-5 md:text-5xl md:justify-self-start"><span className="text-gray-100">CONTACT</span> <span className="text-green-400">ME</span></div>
         <div className="ml-2 mt-16 w-[300px] text-gray-50 absolute text-center font-thin md:mt-0 md:justify-self-end md:mr-5">Would you like to talk? Please contact me through any of these avenues</div>
