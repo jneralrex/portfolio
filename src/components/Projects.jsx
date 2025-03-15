@@ -13,6 +13,11 @@ const projects = [
     title: "Cinco Cinema",
     link: "https://cincocinema.onrender.com/",
   },
+  {
+    id: 3,
+    title: "HouseMatters",
+    link: "https://housematters.vercel.app/",
+  },
 ];
 
 const Projects = () => {
