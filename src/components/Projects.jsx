@@ -6,7 +6,7 @@ const projects = [
   {
     id: 1,
     title: "Getreat Healthcare",
-    link: "https://getreat.onrender.com/",
+    link: "https://getreat.com/",
   },
   {
     id: 2,
@@ -17,6 +17,16 @@ const projects = [
     id: 3,
     title: "HouseMatters",
     link: "https://housematters.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Sartor CRM",
+    link: "https://sartor-crm.onrender.com/",
+  },
+  {
+    id: 3,
+    title: "Stratos Lab",
+    link: "https://stratoslab.vercel.app/",
   },
 ];
 
