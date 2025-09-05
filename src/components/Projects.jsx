@@ -19,12 +19,17 @@ const projects = [
     link: "https://housematters.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Sartor CRM",
     link: "https://sartor-crm.onrender.com/",
   },
   {
-    id: 3,
+    id: 5,
+    title: "Sartor",
+    link: "https://sartor.ng/",
+  },
+  {
+    id: 6,
     title: "Stratos Lab",
     link: "https://stratoslab.vercel.app/",
   },
