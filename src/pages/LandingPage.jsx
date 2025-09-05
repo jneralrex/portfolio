@@ -6,7 +6,7 @@ import heroImage from "../assets/hero.jpg";
 
 const projects = [
   { id: 1, link: "https://getreat.onrender.com/", title: "Getreat" },
-  { id: 2, link: "https://sartor-crm.onrender.com/", title: "Sartor CRM" },
+  { id: 2, link: "https://crm.sartor.ng/", title: "Sartor CRM" },
 ];
 
 const LandingPage = () => {
