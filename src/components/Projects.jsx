@@ -15,8 +15,8 @@ const projects = [
   },
   {
     id: 3,
-    title: "HouseMatters",
-    link: "https://housematters.vercel.app/",
+    title: "Spaceehunters",
+    link: "https://spaceehunters.vercel.app/",
   },
   {
     id: 4,
