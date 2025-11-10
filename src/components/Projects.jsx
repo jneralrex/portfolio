@@ -25,8 +25,8 @@ const projects = [
   },
   {
     id: 5,
-    title: "Sartor",
-    link: "https://sartor.ng/",
+    title: "Sartor Website",
+    link: "https://sartor-ng.onrender.com/",
   },
   {
     id: 6,
