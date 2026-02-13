@@ -26,12 +26,12 @@ const projects = [
   {
     id: 5,
     title: "Sartor Website",
-    link: "https://sartor-ng.onrender.com/",
+    link: "https://sartor.ng/",
   },
   {
     id: 6,
-    title: "Stratos Lab",
-    link: "https://stratoslab.vercel.app/",
+    title: "Trustedtek",
+    link: "https://trustedtek.org/",
   },
 ];
 
