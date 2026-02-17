@@ -10,28 +10,28 @@ const projects = [
   },
   {
     id: 2,
-    title: "Cinco Cinema",
-    link: "https://cincocinema.onrender.com/",
-  },
-  {
-    id: 3,
-    title: "Spaceehunters",
-    link: "https://spaceehunters.vercel.app/",
-  },
-  {
-    id: 4,
     title: "Sartor CRM",
     link: "https://crm.sartor.ng/",
   },
   {
-    id: 5,
+    id: 3,
     title: "Sartor Website",
     link: "https://sartor.ng/",
   },
+   {
+    id: 4,
+    title: "Spaceehunters",
+    link: "https://spaceehunters.vercel.app/",
+  },
   {
-    id: 6,
+    id: 5,
     title: "Trustedtek",
     link: "https://trustedtek.org/",
+  },
+   {
+    id: 6,
+    title: "Cinco Cinema",
+    link: "https://cincocinema.onrender.com/",
   },
 ];
 
