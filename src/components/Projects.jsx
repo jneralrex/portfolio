@@ -89,6 +89,8 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
+
+      <p className="mt-6 text-gray-400">Please note that some projects may be private or restricted and projects currently displayed are projects without Non Disclosure Agreements (NDA), if at any point the owners of contractors request a Non Disclosure Agreement (NDA), they will be removed from this list.</p>
     </div>
   );
 };
