@@ -28,8 +28,13 @@ const projects = [
     title: "Trustedtek",
     link: "https://trustedtek.org/",
   },
-   {
+    {
     id: 6,
+    title: "Dorascan Ai",
+    link: "https://dorascan.ai/",
+  },
+   {
+    id: 7,
     title: "Cinco Cinema",
     link: "https://cincocinema.onrender.com/",
   },
