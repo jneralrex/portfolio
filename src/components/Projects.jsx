@@ -33,8 +33,13 @@ const projects = [
     title: "Dorascan Ai",
     link: "https://dorascan.ai/",
   },
-   {
+  {
     id: 7,
+    title: "Pondereth Nigeria Enterprises Limited",
+    link: "https://ponderethnigeriaenterpriseslimited.com/",
+  },
+   {
+    id: 8,
     title: "Cinco Cinema",
     link: "https://cincocinema.onrender.com/",
   },
