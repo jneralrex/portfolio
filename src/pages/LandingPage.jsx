@@ -10,8 +10,13 @@ const projects = [
 ];
 
 const LandingPage = () => {
-  useEffect(() => window.scrollTo(0, 0), []);
-
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
   return (
     <div className="bg-darkBg text-white min-h-screen">
       {/* Navbar */}
