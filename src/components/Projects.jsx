@@ -43,6 +43,11 @@ const projects = [
     title: "Cinco Cinema",
     link: "https://cincocinema.onrender.com/",
   },
+   {
+    id: 8,
+    title: "Sartor Health",
+    link: "https://sartorhealth.com/",
+  },
 ];
 
 const Projects = () => {
