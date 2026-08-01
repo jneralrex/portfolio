@@ -33,7 +33,7 @@ const WhatsAppWidget = () => {
             {whatsappNumbers.map((account, index) => (
               <motion.a
                 key={index}
-                href={`https://wa.me{account.number}?text=Hello,%20I'm%20reaching%20out%20from%20your%20website.`}
+                href={`https://wa.me/${account.number}?text=Hello,%20I'm%20reaching%20out%20from%20your%20website.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, x: 2 }}
