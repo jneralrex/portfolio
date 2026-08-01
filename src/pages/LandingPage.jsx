@@ -122,8 +122,13 @@ const LandingPage = () => {
             ))}
           </div>
         </div>
+        <Link to="/projects" className="flex justify-center mt-12">
+          <button className="mt-12 px-8 py-3.5 bg-blue-600 dark:bg-white text-white dark:text-black text-white dark:text-black font-medium text-sm rounded-full hover:opacity-90 transition duration-300 shadow-xl shadow-zinc-950/10 dark:shadow-white/5">
+            View All Projects
+          </button>
+        </Link>
       </section>
-
+        
       <section className="py-32 px-6 md:px-12 bg-gradient-to-br from-[var(--n)] to-[var(--n2)] dark:from-[#0a0c14] dark:to-[#11152a]">
         <div className="max-w-[1440px] mx-auto text-center">
           <span className=" text-[var(--g)] text-xs uppercase tracking-widest block mb-2"> —CAPABILITIES</span>
