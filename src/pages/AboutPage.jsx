@@ -23,7 +23,7 @@ const TechSkill = ({ name, image, idx }) => (
   >
     <div className="flex flex-col">
       <span className="text-base tracking-tight">{name}</span>
-      <span className="text-[10px] text-orange-600 dark:text-orange-500 font-mono mt-0.5  tracking-wider">
+      <span className="text-[10px] text-[var(--g)] font-mono mt-0.5  tracking-wider">
         Verified Stack
       </span>
     </div>
@@ -57,7 +57,7 @@ const AboutPage = () => {
       </div>
 
       <section className="max-w-5xl mx-auto relative z-10 mb-28">
-        <span className="text-orange-600 dark:text-orange-500 text-xs uppercase tracking-widest block mb-3">
+        <span className="text-[var(--g)] text-xs uppercase tracking-widest block mb-3">
            —Bio Overview
         </span>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-10">Engineering Statement</h2>
@@ -79,7 +79,7 @@ const AboutPage = () => {
 
      <section className="max-w-5xl mx-auto relative z-10 mb-28">
         <div className="mb-10">
-          <span className="text-orange-600 dark:text-orange-500 text-xs uppercase tracking-widest block mb-2">
+          <span className="text-[var(--g)] text-xs uppercase tracking-widest block mb-2">
              —Technical Ecosystem
           </span>
           <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">Engine Capabilities</h3>
@@ -105,7 +105,7 @@ const AboutPage = () => {
 
       <section className="max-w-5xl mx-auto relative z-10">
         <div className="mb-10">
-          <span className="text-orange-600 dark:text-orange-500 text-xs uppercase tracking-widest block mb-2">
+          <span className="text-[var(--g)] text-xs uppercase tracking-widest block mb-2">
              —Performance attribute
           </span>
           <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">Operational Strengths</h3>

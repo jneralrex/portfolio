@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 const Footer = () => {
   return (
 
-    <footer className="w-full border-t border-zinc-200 bg-zinc-50 dark:bg-transparent dark:border-zinc-900/60 py-12 px-6 md:px-12 mt-auto relative z-10">
+    <footer className="w-full bg-[#000044] dark:bg-[#0a0c14] py-12 px-6 md:px-12 mt-auto relative z-10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         
         <p className="text-zinc-500 dark:text-zinc-600 text-xs font-mono">

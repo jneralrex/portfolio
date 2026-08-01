@@ -1,13 +1,74 @@
+@import "tailwindcss";
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
 @import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --n: #000068;
+  --n2: #001a99;
+  --n3: #000044;
+  --n5: #000068;
+  --g: #00A651;
+  --g2: #007A3D;
+  --w: #fff;
+  --off: #F4F5F9;
+  --blk: #0A0A0A;
+  --mu: #6B7180;
+  --bdr: #e2e5ef;
+  --am: #F59E0B;
+  --rd: #DC2626;
+  --cta-bg: linear-gradient(135deg, #000068, #001a99);
+  --cp-top-bg: linear-gradient(135deg, #eef2ff, #e0f5ea);
+  --gb-bg: linear-gradient(135deg, #000044, #001a99);
+  --gb-bg2: linear-gradient(135deg, #000044, #001a99);
+  --cp-icon-bg: #ffffff;
+  --tech-icon-bg: #f0f4ff;
+  --sec-off-bg: #F4F5F9;
+  --portal-bg: linear-gradient(160deg, #000068 0%, #001a99 100%);
+  --body-bg: #F9F9FB;
+
+}
+
+html[data-theme="dark"] {
+  --w: #0f1117;
+  --off: #1a1d27;
+  --blk: #e8eaf0;
+  --mu: #9aa0b0;
+  --bdr: #2a2e3d;
+  --n: #5b7cff;
+  --n2: #6b8aff;
+  --n3: #0a0c12;
+  --n4: #0a0c12;
+  --g: #1fc77a;
+  --g2: #16a866;
+  --n5: #0a0c14;
+  --portal-bg: linear-gradient(160deg, #0a0c14, #11152a);
+  --body-bg: #0B0C10;
+}
+
+html[data-theme="dark"] {
+  --cta-bg: linear-gradient(135deg, #0a0c14, #11152a);
+}
+
+html[data-theme="dark"] {
+  --cp-top-bg: linear-gradient(135deg, #242838, #1e2230);
+  --cp-icon-bg: #1a1d27;
+  --gb-bg: linear-gradient(135deg, #0a0c14, #11152a);
+  --gb-bg2: linear-gradient(135deg, #6b8aff);
+  --sec-off-bg: #161922;
+  /* Maps to your exact .cp-top .vc-ic theme value */
+}
 
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #0a0a0a;
-  color: white;
+  color: var(--blk);
+  background: var(--body-bg);
+  line-height: 1.6
 }
+
+
+
