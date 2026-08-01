@@ -1,151 +1,136 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaArrowUpRightFromSquare, FaArrowRight } from "react-icons/fa6"; 
+import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from "react-icons/si"; 
 import { Link } from "react-router-dom";
 import heroImage from "../assets/hero.jpg";
 
 const projects = [
-  { id: 1, link: "https://trustedtek.org/", title: "TrustedTek" },
-  { id: 2, link: "https://crm.sartor.ng/", title: "Sartor CRM" },
+  { 
+    id: 1, 
+    link: "https://trustedtek.org", 
+    title: "TrustedTek", 
+    tags: ["React", "Tailwind", "Security"],
+    desc: "A high-performance platform built with deep security optimization."
+  },
+  { 
+    id: 2, 
+    link: "https://sartor.ng", 
+    title: "Sartor CRM", 
+    tags: ["Node.js", "Express", "MongoDB"],
+    desc: "Custom enterprise management suite optimizing team workflows."
+  },
 ];
 
 const LandingPage = () => {
-function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-}
   return (
-    <div className="bg-darkBg text-white min-h-screen">
-      {/* Navbar */}
-      <header className="fixed top-0 w-full bg-darkBg/80 backdrop-blur-lg py-4 px-8 flex flex-col md:flex-row justify-between items-center z-50 ">
-        <h1 className="text-2xl font-bold text-neon">Idah Abubakar Rex</h1>
-        <nav className="flex gap-6">
-          <Link to="/projects" className="hover:text-neon">
-            Projects
-          </Link>
-          <Link to="/about" className="hover:text-neon">
-            About
-          </Link>
-          <Link to="/contact" className="hover:text-neon">
-            Contact
-          </Link>
-        </nav>
-      </header>
+    <div className="bg-[#F9F9FB] dark:bg-[#0B0C10] text-zinc-800 dark:text-[#F4F4F6] min-h-screen selection:bg-zinc-200 dark:selection:bg-zinc-700 selection:text-zinc-900 dark:selection:text-white font-sans antialiased overflow-x-hidden relative">
+      
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f2025_1px,transparent_1px),linear-gradient(to_bottom,#1f2025_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 dark:opacity-20 pointer-events-none" />
 
-      {/* Hero Section */}
-      <section className="relative w-full h-screen flex items-center justify-center mt-10">
-        <img
-          src={heroImage}
-          alt="Hero"
-          className="lg:hidden absolute w-full h-full object-cover sm:object-contain opacity-20"
-        />
-        <motion.div
-          className="relative text-center max-w-2xl px-6"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h1 className="text-5xl md:text-7xl font-bold text-neon drop-shadow-lg">
-            Full-Stack Web Developer
+
+      <section className="relative w-full min-h-screen flex items-center px-6 md:px-12 xl:px-24 pt-20">
+        <div className="absolute right-0 top-0 w-1/2 h-full block opacity-80 dark:opacity-50">
+          <img
+            src={heroImage}
+            alt="Hero Focus"
+            className="w-full h-full object-cover dark:grayscale contrast-125 mix-blend-multiply dark:mix-blend-screen"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F9F9FB] dark:from-[#0B0C10] via-transparent to-transparent" />
+        </div>
+
+        <motion.div className="max-w-3xl relative z-10 mt-20 sm:mt-0" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <span className=" text-orange-600 dark:text-orange-500 uppercase tracking-widest text-xs font-semibold block mb-4">
+           —Available for Core Engineering Roles
+          </span>
+          <h1 className="text-5xl md:text-7xl font-bold text-zinc-900 dark:text-white tracking-tight leading-[1.05] mb-6">
+            Building reliable, <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-900 dark:from-zinc-200 dark:via-zinc-400 dark:to-zinc-600">
+              production-ready
+            </span> solutions.
           </h1>
-          <p className="mt-4 text-gray-300">
-            Crafting efficient, high-speed, and visually stunning web solutions.
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-xl font-normal leading-relaxed mb-8">
+            Full-Stack Web Developer specialized in scaling clean Javascript architectures, fast query pipelines, and structured user experiences.
           </p>
           <Link to="/contact">
-            <button className="mt-6 px-6 py-2 border border-neon text-neon hover:bg-neon hover:text-darkBg transition">
-              Contact Me
+            <button className="w-full sm:w-auto px-8 py-3.5 bg-blue-600 dark:bg-white text-white dark:text-black font-medium text-sm rounded-full hover:opacity-90 transition duration-300 shadow-xl shadow-zinc-950/10 dark:shadow-white/5">
+              Discuss a Project
             </button>
           </Link>
         </motion.div>
       </section>
 
-      {/* Project Showcase */}
-      <section className="max-w-6xl mx-auto py-20 px-6">
-  <h2 className="text-4xl font-bold text-center text-neon">Projects</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-    {projects.map((project) => (
-      <a
-        key={project.id}
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <motion.div
-          className="relative group rounded-lg overflow-hidden bg-darkCard cursor-pointer"
-          whileHover={{ scale: 1.05 }}
-        >
-          <iframe
-            src={project.link}
-            title={project.title}
-            className="w-full h-64 object-cover opacity-80 group-hover:opacity-100 transition"
-          />
-          <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-            <p className="text-white text-xl font-bold">{project.title}</p>
-          </div>
-        </motion.div>
-      </a>
-    ))}
-  </div>
+      <section className="max-w-7xl mx-auto py-32 px-6 md:px-12 border-t border-zinc-200 dark:border-zinc-900">
+        <div className="mb-16">
+          <span className=" text-xs uppercase tracking-widest block mb-2  text-orange-600 dark:text-orange-500"> —SELECTED BUILDS</span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Live Operations</h2>
+        </div>
 
-  {/* "See more" button */}
-  <div className="w-full flex items-center justify-center mt-5">
-    <motion.button
-      whileHover={{
-        scale: 1.1,
-        boxShadow: "0px 0px 15px #00FFFF",
-        backgroundColor: "#1A1A1A",
-      }}
-      className="mb-6 px-6 py-3 border border-[#00FFFF] text-[#00FFFF] font-semibold rounded-lg transition-all duration-300 bg-[#121212] shadow-md shadow-[#00FFFF40] hover:shadow-lg"
-    >
-      <Link to="/projects">See more</Link>
-    </motion.button>
-  </div>
-</section>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {projects.map((project) => (
+            <div key={project.id} className="flex flex-col gap-4 group">
+              <div className="w-full rounded-xl overflow-hidden bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-lg dark:shadow-2xl relative">
+                <div className="h-10 bg-zinc-50 dark:bg-zinc-950/60 border-b border-zinc-200 dark:border-zinc-800/80 px-4 flex items-center justify-between">
+                  <div className="flex gap-1.5">
+                    <span className="w-3 h-3 rounded-full bg-zinc-200 dark:bg-zinc-800" />
+                    <span className="w-3 h-3 rounded-full bg-zinc-200 dark:bg-zinc-800" />
+                    <span className="w-3 h-3 rounded-full bg-zinc-200 dark:bg-zinc-800" />
+                  </div>
+                  <div className="bg-zinc-100 dark:bg-zinc-900 text-[11px] text-zinc-400 dark:text-zinc-500 px-6 py-0.5 rounded border border-zinc-200 dark:border-zinc-800 max-w-xs truncate font-mono">
+                    {project.link.replace("https://", "")}
+                  </div>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition">
+                    <FaArrowUpRightFromSquare className="text-xs" />
+                  </a>
+                </div>
+                
+                <div className="relative w-full h-[340px] bg-zinc-100 dark:bg-zinc-950 overflow-hidden">
+                  <iframe src={project.link} title={project.title} className="w-full h-full border-none opacity-90 pointer-events-none select-none" />
+                  <div className="absolute inset-0 bg-transparent" />
+                </div>
+              </div>
 
-
-      {/* Tech Stack */}
-      <section className="text-center py-20 bg-darkCard">
-        <h2 className="text-4xl font-bold text-neon">Tech Stack</h2>
-        <p className="text-gray-400 mt-2">
-          Some of the technologies I work with:
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-6 text-neon text-3xl">
-          <i className="devicon-mongodb-plain colored">Mongo</i>
-          <i className="devicon-express-original text-white"> Express </i>
-          <i className="devicon-react-original colored">React</i>
-          <i className="devicon-nodejs-plain colored">Node.js</i>
+              <div className="pt-2 flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-semibold text-zinc-900 dark:text-white tracking-tight">{project.title}</h3>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1 max-w-md">{project.desc}</p>
+                  <div className="flex gap-2 mt-3">
+                    {project.tags.map((tag, index) => (
+                      <span key={index} className="text-[11px] font-mono tracking-tight text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-3 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-full text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all">
+                  <FaArrowUpRightFromSquare className="text-sm" />
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="text-center py-8 bg-darkBg">
-        <p className="text-gray-500">
-          &copy; 2025 My Portfolio. All rights reserved.
-        </p>
-        <div className="flex justify-center gap-6 text-2xl mt-4">
-        <a
-  href="https://github.com/jneralrex"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hover:text-neon"
->
-  <FaGithub />
-</a>
-
-<a
-  href="https://www.linkedin.com/in/abubakar-idah-b081a715b"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hover:text-neon"
->
-  <FaLinkedin />
-</a>
-
+      <section className="py-32 px-6 md:px-12 bg-zinc-50 dark:bg-gradient-to-b dark:from-transparent dark:to-[#0e1014] border-t border-zinc-200 dark:border-zinc-950">
+        <div className="max-w-4xl mx-auto text-center">
+          <span className=" text-orange-600 dark:text-orange-500 text-xs uppercase tracking-widest block mb-2"> —CAPABILITIES</span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Core Ecosystem</h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-12">
+            {[
+              { icon: <SiMongodb className="text-emerald-600 dark:text-emerald-500" />, label: "MongoDB" },
+              { icon: <SiExpress className="text-zinc-800 dark:text-white" />, label: "Express" },
+              { icon: <SiReact className="text-sky-600 dark:text-sky-400" />, label: "React" },
+              { icon: <SiNodedotjs className="text-green-600 dark:text-green-500" />, label: "Node.js" },
+            ].map((tech, idx) => (
+              <div key={idx} className="bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/80 rounded-xl p-6 flex flex-col items-center justify-center gap-3 shadow-sm">
+                <div className="text-3xl">{tech.icon}</div>
+                <span className="text-xs font-medium font-mono text-zinc-600 dark:text-zinc-400 tracking-tight">{tech.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      </footer>
+      </section>
     </div>
   );
 };

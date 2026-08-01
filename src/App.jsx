@@ -1,32 +1,30 @@
 import React from 'react';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
+
+import AboutPage from './pages/AboutPage';
+import { ThemeProvider } from './context/ThemeContext';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 import LandingPage from './pages/LandingPage';
-import Contact from './components/Contact';
-import Projects from './components/Projects';
-import AboutPage from './components/AboutPage';
-// import LandingPage from './components/landing/LandingPage';
-// import Nav from './components/navigation/Nav';
-// import AboutPage from './components/story/AboutPage';
-// import Contact from './components/onboardingPages/Contact';
-// import Projects from './components/projects/Projects';
+import RootLayout from './components/layout/RootLayout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
-        <Route index element={<LandingPage />} />
-        <Route path='/contact' element={<Contact />} />
-          <Route path='projects' element={<Projects />} />
-          <Route path='about' element={<AboutPage />} />
-        </Route>
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<LandingPage />} />
+      <Route path='contact' element={<Contact />} />
+      <Route path='projects' element={<Projects />} />
+      <Route path='about' element={<AboutPage />} />
+    </Route>
   )
 );
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <RouterProvider router={router} />
-    </>
-  )
+    </ThemeProvider>
+  );
 }
 
 export default App;
